@@ -10,6 +10,18 @@ function writePassword() {
 
 }
 
+// possible values of code
+confirmNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+confirmCharcter = "!", "@", "#", "$", "%", "^", "&", "*", "()"
+
+confirmUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+confirmLowerCase = "abcdefghijklmnopqrstuvwxyz"
+// valuesNumber 
+
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
@@ -26,15 +38,9 @@ enter = parseInt(prompt("How many characters would you like your password? Choos
 
 
 // possible values of code
-confirmNumber = "123456789"
 
-confirmCharcter = "!@#$%^&*()"
-
-confirmUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-
-confirmLowerCase = "abcdefghijklmnopqrstuvwxyz"
-// valuesNumber 
 
 for (var i = 0; i <= generateBtn; i++); {
   password = password + valuesString.charAt(Math.floor(Math.random() * Math.floor(value.length)))
 }
+
