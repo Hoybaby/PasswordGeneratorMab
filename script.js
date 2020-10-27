@@ -12,11 +12,11 @@ function writePassword() {
 
 // Arrays of code
 
-var start;
+var start ="";
 
 number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-character = "!", "@", "#", "$", "%", "^", "&", "*", "()"
+character = ["!", "@", "#", "$", "%", "^", "&", "*", "()"]
 
 UpperCase = ["A","B","C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O","P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
@@ -35,10 +35,6 @@ var confirmLowerCase;
 
 var confirmUpperCase; 
 
-enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"))
-
-
-
 
 // for (var i = 0; i <= generateBtn; i++); {
 //   password = password + valuesString.charAt(Math.floor(Math.random() * Math.floor(value.length)))
@@ -46,12 +42,12 @@ enter = parseInt(prompt("How many characters would you like your password? Choos
 
 function generatePassword() {
 
-    start = prompt("How many characters would you like your password to be? Please choose between 8 and 128");
+    var start = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128"));
 
-    while (start <= 8 || start >=129) {
+    while (start <= 8 || start >= 129) {
         alert("Password needs a valid length. Please try again!");
-        var start = prompt("How many characters would you like your password to be? Please choose between 8 and 128");
-    }
+       start = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128"));
+    };
     // if (!start) { 
     //     alert("This needs a value");     
     // } else if (start < 8 || start > 128) {
