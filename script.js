@@ -51,6 +51,7 @@ function generatePassword() {
         start = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128"));
     };
 
+    // this will occur if user selects cancel on the choice
     if (!start) {
         alert("This needs a value");
     } else {
@@ -66,7 +67,7 @@ function generatePassword() {
         confirmNumber = confirm("Would you like Numbers in your Password?");
         confirmLowerCase = confirm("would you like Lower Case Letters in your Password?")
         confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
-    
+                // must place the confirmupper cases above or it will not change the result
     }
     var userSelections = {
         length: start,
