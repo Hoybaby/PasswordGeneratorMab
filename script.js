@@ -11,13 +11,16 @@ function writePassword() {
 }
 
 // possible values of code
-confirmNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-confirmCharcter = "!", "@", "#", "$", "%", "^", "&", "*", "()"
+var start;
 
-confirmUpperCase = ["A","B","C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O","P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
-confirmLowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+character = "!", "@", "#", "$", "%", "^", "&", "*", "()"
+
+upperCase = ["A","B","C", "D", "E", "F", "G", "H","I", "J", "K", "L", "M", "N", "O","P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+
+lowerCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
 
 
@@ -36,10 +39,23 @@ enter = parseInt(prompt("How many characters would you like your password? Choos
 
 
 
-// possible values of code
-
 
 for (var i = 0; i <= generateBtn; i++); {
   password = password + valuesString.charAt(Math.floor(Math.random() * Math.floor(value.length)))
 }
 
+function generatePassword() {
+
+    start = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128"));
+
+    if (!start) { 
+        alert("This needs a value");     
+    } else if (start < 8 || start > 128) {
+        // Validates the user input
+        // now we will start the input for user
+    } else {
+        confirmSpecial =
+
+    }
+
+}
