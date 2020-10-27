@@ -1,4 +1,4 @@
-// Assignment Code
+//Assignment Code
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
@@ -38,11 +38,3 @@ confirmLowerCase = "abcdefghijklmnopqrstuvwxyz"
 for (var i = 0; i <= generateBtn; i++); {
   password = password + valuesString.charAt(Math.floor(Math.random() * Math.floor(value.length)))
 }
-
-
-
-// Start function to generate password
-// function generatePassword() {
-//   // Asks for user input
-//   enter = parseInt(prompt("How many characters would you like your password? Choose between 8 and 128"));
-//   // First if statement for user validation 
