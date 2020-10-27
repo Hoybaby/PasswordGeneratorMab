@@ -14,7 +14,7 @@ function writePassword() {
 
 var start ="";
 
-number = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 character = ["!", "@", "#", "$", "%", "^", "&", "*", "()"]
 
@@ -51,14 +51,12 @@ function generatePassword() {
 
     if (!start) { 
         alert("This needs a value");     
-    } else if (start < 8 || start > 128) {
-        // Validates the user input
-        // now we will start the input for user
     } else {
         confirmCharacter = confirm("Would you like Special Characters your password?");
         confirmNumber = confirm("Would you like Numbers in your Password?");
         confirmLowerCase = confirm("would you like Lower Case Letters in your Password?")
         confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
     }
+
 
 };
