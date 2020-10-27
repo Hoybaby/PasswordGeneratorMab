@@ -34,6 +34,9 @@ var confirmLowerCase;
 
 var confirmUpperCase;
 
+// variable answers is made so I can concatcatate later
+var answers;
+
 
 // for (var i = 0; i <= generateBtn; i++); {
 //   password = password + valuesString.charAt(Math.floor(Math.random() * Math.floor(value.length)))
@@ -57,6 +60,14 @@ function generatePassword() {
         confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
     }
 
+    while (confirmCharacter === false && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false) {
+        alert("You must choose at least one!")
+        confirmCharacter = confirm("Would you like Special Characters your password?");
+        confirmNumber = confirm("Would you like Numbers in your Password?");
+        confirmLowerCase = confirm("would you like Lower Case Letters in your Password?")
+        confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
+    
+    }
     var userSelections = {
         length: start,
         special: confirmCharacter,
