@@ -93,13 +93,39 @@ function generatePassword() {
     } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
         answers = confirmCharacter.concat(confirmNumber);
 
+    } else if (confirmconfirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
+        answer = confirmLowerCase.concat(UpperCase);
+    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
+        answer = confirmCharacter.concat(confirmUpperCase);
+    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
+        answer = confirmNumber.concat(confirmLowerCase);
+    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
+        answer = confirmCharacter.concat(confirmLowerCase);
+    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
+        answer = confirmNumber.concat(confirmUpperCase);
+
+            // finished with double PushSubscriptionOptions, now i will code the single below
+    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false) {
+        answer = confirmCharacter;
+    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
+        answer = confirmNumber;
+    } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
+        answer = confirmUpperCase;
+    } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
+        answer = confirmLowerCase;
     }
 
+
+
+    
+    
     for (i = 0; i < start; i++) {
         var genNumb = answers[Math.floor(Math.random() * start)];
-    }
 
+    
     return
+}
+
 
 
     // }
