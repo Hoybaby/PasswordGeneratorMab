@@ -69,8 +69,12 @@ function generatePassword() {
         confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
                 // must place the confirmupper cases above or it will not change the result
     }
-        // for 4 options selected
-    if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
+        // for 4 options not selected. Previously i had it as 4 positive but the nrealized it would never cascade down.
+    if (confirmCharacter === !true && confirmNumber === !true && confirmUpperCase === !true && confirmLowerCase === !true) {
+        alert("You must choose at least one!")
+       
+            // 4 options selected
+    } else if(confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
         answers = confirmCharacter.concat(confirmNumber, confirmUpperCase, confirmLowerCase); 
 
         // for three options
