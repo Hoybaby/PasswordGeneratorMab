@@ -68,59 +68,59 @@ function generatePassword() {
     
         // FOR LOOP GOES HERE
     }
-    if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false) {
-        alert("You must choose at least one!")
-        confirmCharacter = confirm("Would you like Special Characters your password?");
-        confirmNumber = confirm("Would you like Numbers in your Password?");
-        confirmLowerCase = confirm("would you like Lower Case Letters in your Password?")
-        confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
-                // must place the confirmupper cases above or it will not change the result
-    }
-        // for 4 options not selected. Previously i had it as 4 positive but the nrealized it would never cascade down.
-    if (confirmCharacter === !true && confirmNumber === !true && confirmUpperCase === !true && confirmLowerCase === !true) {
-        alert("You must choose at least one!")
+    // if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false) {
+    //     alert("You must choose at least one!")
+    //     confirmCharacter = confirm("Would you like Special Characters your password?");
+    //     confirmNumber = confirm("Would you like Numbers in your Password?");
+    //     confirmLowerCase = confirm("would you like Lower Case Letters in your Password?")
+    //     confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
+    //             // must place the confirmupper cases above or it will not change the result
+    // }
+    //     // for 4 options not selected. Previously i had it as 4 positive but the nrealized it would never cascade down.
+    // if (confirmCharacter === !true && confirmNumber === !true && confirmUpperCase === !true && confirmLowerCase === !true) {
+    //     alert("You must choose at least one!")
        
-            // 4 options selected. 
-    } else if(confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
-        answers = confirmCharacter.concat(confirmNumber, confirmUpperCase, confirmLowerCase); 
+    //         // 4 options selected. 
+    // } else if(confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
+    //     answers = confirmCharacter.concat(confirmNumber, confirmUpperCase, confirmLowerCase); 
 
-        // for three options
-    } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
-        answers = confirmCharacter.concat(confirmNumber, confirmUpperCase);
+    //     // for three options
+    // } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
+    //     answers = confirmCharacter.concat(confirmNumber, confirmUpperCase);
     
-    } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
-        answers = confirmCharacter.concat(confirmNumber, confirmLowerCase);
+    // } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
+    //     answers = confirmCharacter.concat(confirmNumber, confirmLowerCase);
     
-    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
-        answers = confirmCharacter.concat(confirmLowerCase, confirmUpperCase);
+    // } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
+    //     answers = confirmCharacter.concat(confirmLowerCase, confirmUpperCase);
 
-    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
-        answers = confirmNumber.concat(confirmUpperCase, confirmLowerCase);
-        // all three options are covered so coding for double options now
-    } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
-        answers = confirmCharacter.concat(confirmNumber);
+    // } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
+    //     answers = confirmNumber.concat(confirmUpperCase, confirmLowerCase);
+    //     // all three options are covered so coding for double options now
+    // } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
+    //     answers = confirmCharacter.concat(confirmNumber);
 
-    } else if (confirmconfirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
-        answers = confirmLowerCase.concat(UpperCase);
-    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
-        answers = confirmCharacter.concat(confirmUpperCase);
-    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
-        answers = confirmNumber.concat(confirmLowerCase);
-    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
-        answers = confirmCharacter.concat(confirmLowerCase);
-    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
-        answers = confirmNumber.concat(confirmUpperCase);
+    // } else if (confirmconfirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
+    //     answers = confirmLowerCase.concat(UpperCase);
+    // } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
+    //     answers = confirmCharacter.concat(confirmUpperCase);
+    // } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
+    //     answers = confirmNumber.concat(confirmLowerCase);
+    // } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
+    //     answers = confirmCharacter.concat(confirmLowerCase);
+    // } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
+    //     answers = confirmNumber.concat(confirmUpperCase);
 
-            // finished with double PushSubscriptionOptions, now i will code the single below
-    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false) {
-        answers = confirmCharacter;
-    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
-        answers = confirmNumber;
-    } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
-        answers = confirmUpperCase;
-    } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
-        answers = confirmLowerCase;
-    }
+    //         // finished with double PushSubscriptionOptions, now i will code the single below
+    // } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false) {
+    //     answers = confirmCharacter;
+    // } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
+    //     answers = confirmNumber;
+    // } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
+    //     answers = confirmUpperCase;
+    // } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
+    //     answers = confirmLowerCase;
+    // }
 
 
     // var userPassword = []
