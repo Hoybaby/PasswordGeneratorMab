@@ -69,36 +69,52 @@ function generatePassword() {
         confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
                 // must place the confirmupper cases above or it will not change the result
     }
-    var userSelections = {
-        length: start,
-        special: confirmCharacter,
-        numbers: confirmNumber,
-        lowerCase: confirmLowerCase,
-        upperCase: confirmUpperCase
+
+    if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
+        answers = confirmCharacter.concat(confirmNumber, confirmUpperCase, confirmLowerCase)
+
+        // for three options
+    } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
+        answer = confirmCharacter.concat(confirmNumber, confirmUpperCase);
+    
+    } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
+        answer = confirmCharacter.concat(confirmNumber, confirmLowerCase);
+    
+    } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
+        answer = confirmCharacter.concat(confirmLowerCase, confirmUpperCase)
+
     }
 
-    var possibleChars = [];
-    var guaranteedChars = [];
+    // var userSelections = {
+    //     length: start,
+    //     special: confirmCharacter,
+    //     numbers: confirmNumber,
+    //     lowerCase: confirmLowerCase,
+    //     upperCase: confirmUpperCase
+    // }
 
-    if (userSelections.special) {
-        console.log("The user wants special chars!")
+    // var possibleChars = [];
+    // var guaranteedChars = [];
+
+    // if (userSelections.special) {
+    //     console.log("The user wants special chars!")
+    //     // Add these chars to possibleChars array
+    // }
+
+    // if (userSelections.numbers) {
+    //     console.log("The user wants numbers chars!")
+    //     // Add these chars to possibleChars array
+    // }
+
+    // if (userSelections.lowerCase) {
+    //     console.log("The user wants lower chars!")
+    //     // Add these chars to possibleChars array
+    // }
+
+    // if (userSelections.upperCase) {
+    //     console.log("The user wants upper chars!")
         // Add these chars to possibleChars array
-    }
-
-    if (userSelections.numbers) {
-        console.log("The user wants numbers chars!")
-        // Add these chars to possibleChars array
-    }
-
-    if (userSelections.lowerCase) {
-        console.log("The user wants lower chars!")
-        // Add these chars to possibleChars array
-    }
-
-    if (userSelections.upperCase) {
-        console.log("The user wants upper chars!")
-        // Add these chars to possibleChars array
-    }
+    
 
     // for(var i = 0; i < userSelections.length; i++){
     // pull randomly from possible chars and push it into guaranteed
