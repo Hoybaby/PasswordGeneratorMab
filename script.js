@@ -69,19 +69,31 @@ function generatePassword() {
         confirmUpperCase = confirm("Would you like Upper case letters in your Password?")
                 // must place the confirmupper cases above or it will not change the result
     }
-
+        // for 4 options selected
     if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
-        answers = confirmCharacter.concat(confirmNumber, confirmUpperCase, confirmLowerCase)
+        answers = confirmCharacter.concat(confirmNumber, confirmUpperCase, confirmLowerCase); 
 
         // for three options
     } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
-        answer = confirmCharacter.concat(confirmNumber, confirmUpperCase);
+        answers = confirmCharacter.concat(confirmNumber, confirmUpperCase);
     
     } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
-        answer = confirmCharacter.concat(confirmNumber, confirmLowerCase);
+        answers = confirmCharacter.concat(confirmNumber, confirmLowerCase);
     
     } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
-        answer = confirmCharacter.concat(confirmLowerCase, confirmUpperCase)
+        answers = confirmCharacter.concat(confirmLowerCase, confirmUpperCase);
+
+    } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === true) {
+        answers = confirmNumber.concat(confirmUpperCase, confirmLowerCase);
+        // all three options are covered so coding for double options now
+    } else if (confirmCharacter === true && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
+        answers = confirmCharacter.concat(confirmNumber);
+
+    }
+
+    for (i = 0; i < start; i++) {
+        var genNumb = answers[Math.floor(Math.random() * answers.length)];
+
 
     }
 
@@ -122,5 +134,5 @@ function generatePassword() {
 
     //return the password array
 
-};
+}
 
