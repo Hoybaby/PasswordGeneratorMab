@@ -96,7 +96,10 @@ function generatePassword() {
     }
 
     for (i = 0; i < start; i++) {
-        var genNumb = answers[Math.floor(Math.random() * answers.length)];
+        var genNumb = answers[Math.floor(Math.random() * start)];
+    }
+
+    return
 
 
     // }
@@ -137,5 +140,5 @@ function generatePassword() {
     //}
 
     //return the password array
-    }
+    
 }
