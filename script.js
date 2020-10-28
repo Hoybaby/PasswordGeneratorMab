@@ -38,6 +38,8 @@ var confirmUpperCase;
 var answers;
 
 
+userPassword
+
 // for (var i = 0; i <= generateBtn; i++); {
 //   password = password + valuesString.charAt(Math.floor(Math.random() * Math.floor(value.length)))
 // }
@@ -94,33 +96,34 @@ function generatePassword() {
         answers = confirmCharacter.concat(confirmNumber);
 
     } else if (confirmconfirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === true) {
-        answer = confirmLowerCase.concat(UpperCase);
+        answers = confirmLowerCase.concat(UpperCase);
     } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
-        answer = confirmCharacter.concat(confirmUpperCase);
+        answers = confirmCharacter.concat(confirmUpperCase);
     } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === true) {
-        answer = confirmNumber.concat(confirmLowerCase);
+        answers = confirmNumber.concat(confirmLowerCase);
     } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
-        answer = confirmCharacter.concat(confirmLowerCase);
+        answers = confirmCharacter.concat(confirmLowerCase);
     } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === true && confirmLowerCase === false) {
-        answer = confirmNumber.concat(confirmUpperCase);
+        answers = confirmNumber.concat(confirmUpperCase);
 
             // finished with double PushSubscriptionOptions, now i will code the single below
     } else if (confirmCharacter === true && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === false) {
-        answer = confirmCharacter;
+        answers = confirmCharacter;
     } else if (confirmCharacter === false && confirmNumber === true && confirmUpperCase === false && confirmLowerCase === false) {
-        answer = confirmNumber;
+        answers = confirmNumber;
     } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === true && confirmLowerCase === false) {
-        answer = confirmUpperCase;
+        answers = confirmUpperCase;
     } else if (confirmCharacter === false && confirmNumber === false && confirmUpperCase === false && confirmLowerCase === true) {
-        answer = confirmLowerCase;
+        answers = confirmLowerCase;
     }
 
 
-
-    
+    var userPassword = []
     
     for (i = 0; i < start; i++) {
-        var genNumb = answers[Math.floor(Math.random() * start)];
+        var genPass = answer[Math.floor(Math.random() * start.length)];
+        userPassword.push(genPass);
+    }
 
     
     return
@@ -167,4 +170,4 @@ function generatePassword() {
 
     //return the password array
     
-}
+
