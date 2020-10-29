@@ -33,10 +33,8 @@ var confirmLowerCase;
 var confirmUpperCase;
 
 // variable answers is made so I can concatcatate later
-var answers;
+// var answers;
 
-
-userPassword
 
 // for (var i = 0; i <= generateBtn; i++); {
 //   password = password + valuesString.charAt(Math.floor(Math.random() * Math.floor(value.length)))
@@ -45,9 +43,10 @@ userPassword
 function generatePassword() {
 
     var numbers = "123456789"
-    var characters = "!@#$%^&*()"
-    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     var lowerCase = "abcdefghijklmnopqrstuvwxyz"
+    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var characters = "!@#$%^&*()"
+    
         
     var userInput = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128"));
 
@@ -77,6 +76,8 @@ function generatePassword() {
     if (confirmUpperCase) {
         answers += upperCase;
     }    
+
+    answers = answers.split('')
 
 
     for ( var i = 0; i < userInput; i++) {
