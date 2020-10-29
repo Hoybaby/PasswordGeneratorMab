@@ -67,8 +67,22 @@ function generatePassword() {
 
     if (confirmNumber) {
         answers += numbers;
-}
+    }
+    if (confirmCharacter) {
+        answers += characters;
+    }
+    if (confirmLowerCase) {
+        answers += lowerCase;
+    }
+    if (confirmUpperCase) {
+        answers += upperCase
+    }    
 
+
+    for ( var i = 0; i < userInput; i++) {
+        var randomIndex = Math.floor(Math.random() * answers.length);
+    }
+}
 
 
     // while (start < 8 || start >= 129) {
