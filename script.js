@@ -46,8 +46,8 @@ function generatePassword() {
 
     var numbers = "123456789"
     var characters = "!@#$%^&*()"
-    var UpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    var LowerCase = "abcdefghijklmnopqrstuvwxyz"
+    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    var lowerCase = "abcdefghijklmnopqrstuvwxyz"
         
     var userInput = parseInt(prompt("How many characters would you like your password to be? Please choose between 8 and 128"));
 
@@ -75,13 +75,15 @@ function generatePassword() {
         answers += lowerCase;
     }
     if (confirmUpperCase) {
-        answers += upperCase
+        answers += upperCase;
     }    
 
 
     for ( var i = 0; i < userInput; i++) {
         var randomIndex = Math.floor(Math.random() * answers.length);
+        password += answers[randomIndex];
     }
+    return password;
 }
 
 
