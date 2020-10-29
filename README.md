@@ -23,6 +23,8 @@ to individualss
     <li> Variables with names like lowerCase, upperCase, numbers, and characters will be a good start. Inside of these variables we would like to have the alphabet of upper and lower case, number and special characters on top of the keyboard.</li>
     <li> After a long string was made inside the variables, we must prompt a user to input information that would require them to place a required password length they want that is between 8 and 128.</li>
     <li>We must make the user choose what kind of characters they want so we have to make a confirm(), to pop up a specific message. The answer to will be stored into a variable so we can compare later to a condition.
+     ![image](https://user-images.githubusercontent.com/70716786/97526611-e34dcd80-197f-11eb-84e4-4f9c4004f9e0.png)
+
     <li>Once all choices like upperCase, lowercase, numbers and characters are selected. One must use these inputs which are stored in varibales. to compare if they are true. </li>
     
 </ul>    
