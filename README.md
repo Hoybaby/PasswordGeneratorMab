@@ -26,7 +26,9 @@ to individualss
     <li>Once all choices like upperCase, lowercase, numbers and characters are selected. One must use these inputs which are stored in varibales. to compare if they are true </li>
     
 </ul>    
-https://user-images.githubusercontent.com/70716786/99477573-c2462000-2920-11eb-81a8-d55cc82ec07c.PNG
+
+![Password Generator](https://user-images.githubusercontent.com/70716786/99477573-c2462000-2920-11eb-81a8-d55cc82ec07c.PNG)
+
 
 
  <h2>Acknowledgements</h2>
